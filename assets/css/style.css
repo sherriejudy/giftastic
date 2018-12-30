@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/bubbletea.png");
+    /* background-position: center; */
+    background-repeat: repeat;
+    /* padding-top: 2.5%; */
+    font-family: "Times New Roman", Times, serif;
+    background-size: cover;
+  }
+
+  /* height 1200 width 550? */

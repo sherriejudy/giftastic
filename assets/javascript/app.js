@@ -1,15 +1,15 @@
 let api_key = "mohzNO5atvsiXS7XdAVpUevJaoSJtEdc";
 
-$(document).ready(function() {
+$(document).ready(function () {
   //Global Variables
   var gifs = [];
-  var searchTerms = ["banana", "cereal", "steak"];
+  var searchTerms = ["bubble tea", "rose", "mango", "green tea", "lychee", "jelly"];
 
   // START!!
   start();
 
   // Set up
-  $("#add").on("click", function() {
+  $("#add").on("click", function () {
     let text = $("#input").val();
     addButton(text);
   });
@@ -25,11 +25,11 @@ $(document).ready(function() {
   function addButton(text) {
     var btn = $("<button>");
     btn.addClass("btn");
-    btn.addClass("btn-info");
+    btn.addClass("btn-outline-secondary");
     // Adds margin of 1 on right
     btn.addClass("mr-1");
     btn.text(text);
-    btn.on("click", function() {
+    btn.on("click", function () {
       clearGifs();
       pullAndPlaceGifs($(this).text());
     });
@@ -45,7 +45,7 @@ $(document).ready(function() {
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
       let data = response.data;
       processGifs(data);
     });
@@ -84,7 +84,7 @@ $(document).ready(function() {
     card.append(cardImage);
     card.append(cardBody);
 
-    card.on("click", function() {
+    card.on("click", function () {
       if ($(this).attr("animating") === "false") {
         $(this).attr("animating", "true");
         $(this)

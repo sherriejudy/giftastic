@@ -15,6 +15,5 @@ The GIPHY API is called using AJAX with JavaScript and jQuery used to change the
 * Bootstrap
 * HTML
 * CSS
-
 ```
 
